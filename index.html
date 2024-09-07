@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estúdio M Produções - Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Estúdio M Produções</div>
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Serviços</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+  
+  <section id="home" class="hero">
+    <video autoplay muted loop id="bg-video">
+      <source src="studio-video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-text">
+      <h1>Bem-vindo ao Estúdio M Produções</h1>
+      <p>Produção Musical e Gravação Profissional com Marialvo Nascimento</p>
+      <button id="more-info-btn">Saiba Mais</button>
+    </div>
+  </section>
+  
+  <section id="services" class="services">
+    <h2>Serviços</h2>
+    <div class="service-list">
+      <div class="service-item">
+        <h3>Gravação de Áudio</h3>
+        <button class="popup-btn" data-service="Gravação de Áudio">Detalhes</button>
+      </div>
+      <div class="service-item">
+        <h3>Produção Musical</h3>
+        <button class="popup-btn" data-service="Produção Musical">Detalhes</button>
+      </div>
+      <div class="service-item">
+        <h3>Mixagem e Masterização</h3>
+        <button class="popup-btn" data-service="Mixagem e Masterização">Detalhes</button>
+      </div>
+      <!-- Novos serviços adicionados -->
+      <div class="service-item">
+        <h3>Composição Musical</h3>
+        <button class="popup-btn" data-service="Composição Musical">Detalhes</button>
+      </div>
+      <div class="service-item">
+        <h3>Design de Som</h3>
+        <button class="popup-btn" data-service="Design de Som">Detalhes</button>
+      </div>
+      <div class="service-item">
+        <h3>Edição de Podcast</h3>
+        <button class="popup-btn" data-service="Edição de Podcast">Detalhes</button>
+      </div>
+      <div class="service-item">
+        <h3>Consultoria em Áudio</h3>
+        <button class="popup-btn" data-service="Consultoria em Áudio">Detalhes</button>
+      </div>
+    </div>
+  </section>
+  
+  <section id="contact" class="contact">
+    <h2>Contato</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu email" required>
+      <textarea name="message" placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Estúdio M Produções</p>
+  </footer>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <h2>Detalhes do Serviço</h2>
+      <p id="popup-text"></p>
+    </div>
+  </div>
+</body>
+</html>
