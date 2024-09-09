@@ -4,12 +4,18 @@
     padding: 0;
     box-sizing: border-box;
   }
+
   body {
     font-family: 'Arial', sans-serif;
     background-color: #000000;
+    background-image: url('../images/background.image.jpg'); /* Ajuste o caminho conforme a estrutura de pastas */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: #fff;
     scroll-behavior: smooth;
   }
+  
   
   header {
     position: fixed;
