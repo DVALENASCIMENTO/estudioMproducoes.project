@@ -268,8 +268,8 @@ p {
     transition: background-color 0.3s;
   }
   .popup-btn:hover {
-    background-color: #c70000; /* Vermelho mais escuro */
-    color: #fff; /* Mantém a cor do texto em branco */
+    background-color: #a67b2e;
+    color: #fff;
   }
   
   .contact {
@@ -303,9 +303,33 @@ p {
     transition: background-color 0.3s;
   }
   .contact button:hover {
-    background-color: #760000; /* Vermelho mais escuro */
-    color: #fff; /* Mantém a cor do texto em branco */
+    background-color: #a67b2e;
+    color: #fff;
   }
+
+  .social-links {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .social-button {
+    display: inline-block;
+    background-color: #D4AF37;
+    color: #111;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .social-button:hover {
+    background-color: #a67b2e;
+    color: #fff;
+  }
+  
   
   footer {
     padding: 20px;

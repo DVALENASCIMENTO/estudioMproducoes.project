@@ -43,9 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
     popup.style.display = 'none';
   });
 
-  // Form validation
+  // Form validation and submission
   const contactForm = document.getElementById('contact-form');
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const name = contactForm.name.value.trim();
     const email = contactForm.email.value.trim();
@@ -55,8 +55,45 @@ document.addEventListener('DOMContentLoaded', () => {
       alert('Por favor, preencha todos os campos.');
       return;
     }
-    alert('Mensagem enviada com sucesso!');
-    contactForm.reset();
+
+    try {
+      // Opção 1: Enviar para o backend personalizado
+      /*
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      if (response.ok) {
+        alert('Mensagem enviada com sucesso!');
+        contactForm.reset();
+      } else {
+        alert('Houve um problema ao enviar a mensagem. Tente novamente.');
+      }
+      */
+
+      // Opção 2: Enviar com EmailJS
+      emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+        from_name: name,
+        from_email: email,
+        message: message,
+      })
+      .then((response) => {
+        alert('Mensagem enviada com sucesso!');
+        contactForm.reset();
+      })
+      .catch((error) => {
+        console.error('Erro:', error);
+        alert('Houve um problema ao enviar a mensagem. Tente novamente.');
+      });
+
+    } catch (error) {
+      console.error('Erro:', error);
+      alert('Houve um problema ao enviar a mensagem. Tente novamente.');
+    }
   });
 
   // Função para tocar música de fundo
