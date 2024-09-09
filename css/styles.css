@@ -62,7 +62,7 @@
   font-family: 'Poppins', sans-serif;
   font-size: 4rem; /* Tamanho da fonte em telas grandes */
   font-weight: bold;
-  background: linear-gradient(270deg, #ff0000, #2B2B2B, #000000, #ff0000); /* Degradê vermelho e grafite escuro */
+  background: linear-gradient(270deg, #ff0000, #ff0000); /* Degradê vermelho e grafite escuro */
   background-size: 400% 400%; /* Tamanho do degradê para movimento mais fluido */
   background-clip: text;
   -webkit-background-clip: text;
@@ -232,6 +232,7 @@ p {
   .services {
     padding: 50px 20px;
     text-align: center;
+    overflow: hidden;
   }
   .services h2 {
     font-size: 2.5rem;
@@ -240,7 +241,10 @@ p {
   .service-list {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha abaixo quando necessário */
     gap: 20px;
+    max-width: 1200px; /* Define uma largura máxima para a lista de serviços */
+    margin: 0 auto; /* Centraliza a lista de serviços */
   }
   .service-item {
     background-color: #111112;
@@ -264,7 +268,7 @@ p {
     transition: background-color 0.3s;
   }
   .popup-btn:hover {
-    background-color: #760000; /* Vermelho mais escuro */
+    background-color: #c70000; /* Vermelho mais escuro */
     color: #fff; /* Mantém a cor do texto em branco */
   }
   
@@ -306,7 +310,7 @@ p {
   footer {
     padding: 20px;
     text-align: center;
-    background-color: #222;
+    background-color: #000000;
     color: #777;
   }
   
